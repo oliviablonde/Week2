@@ -57,8 +57,12 @@
                 title: 'Hobby',
                 price: 'Free',
                 includesText: 'Includes:',
-                features: ['No credit card required', 'Limited Agent requests', 'Limited Tab completions'],
-                buttonText: 'Download',
+                features: [
+                    'No credit card required',
+                    'Limited Agent requests',
+                    'Limited Tab completions',
+                ],
+                buttonText: 'Start for free',
                 buttonVariant: 'tertiary',
             };
             const proPlan = {
@@ -78,10 +82,29 @@
                 title: 'Teams',
                 price: '$40/user/mo.',
                 includesText: 'Everything in Individual, plus:',
-                features: ['Team marketplace for internal rules, skills, and plugins', 'Agentic code reviews with Bugbot', 'Cloud agents and automations with shared team context'],
+                features: [
+                    'Team marketplace for internal rules, skills, and plugins',
+                    'Agentic code reviews with Bugbot',
+                    'Cloud agents and automations with shared team context',
+                ],
                 buttonText: 'Get Teams',
-                buttonVariant: 'primary',
+                buttonVariant: 'secondary',
             };  
+
+            const EnterprisePlan = {
+                title: 'Enterprise',
+                price: 'Custom',
+                includesText: 'Everything on Teams, Plus.',
+                features: [
+                    'Pooled usage to maximize budget efficiency',  
+                    'Repository, model, and MCP access controls',  
+                    'Audit logs and service accounts', 
+                    'AI code tracking API',
+                ],
+                buttonText: 'Get Enterprise',
+                buttonVariant: 'primary',
+            };
+
 
             return (
                 // <> is a React Fragment - it groups elements without adding extra HTML divs
@@ -93,6 +116,7 @@
                         <PricingCard {...hobbyPlan} />
                         <PricingCard {...proPlan} />
                         <PricingCard {...teamsPlan} />
+                        <PricingCard {...EnterprisePlan} />
                     </div>
                 </>
             );
