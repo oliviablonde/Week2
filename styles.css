@@ -1,9 +1,23 @@
+/* ==========================================================================
+   Pricing Plans — styles.css
+   Maps to index.html. Class names match HTML for easy cross-reference.
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   Reset — removes browser defaults for consistent spacing
+   -------------------------------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+/* --------------------------------------------------------------------------
+   Page — full-viewport canvas, centered content
+   Background: #f7f7f4 (warm off-white)
+   -------------------------------------------------------------------------- */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
@@ -14,15 +28,26 @@ body {
     padding: 20px;
 }
 
+
+/* --------------------------------------------------------------------------
+   Cards container — horizontal row of pricing cards
+   Gap between cards: 24px
+   -------------------------------------------------------------------------- */
 .cards-container {
     display: flex;
     flex-direction: row;
     gap: 24px;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
+
+/* --------------------------------------------------------------------------
+   Card — single pricing plan panel
+   Size: 320px wide, min 380px tall
+   Fill: #f2f1ed | Corner radius: 4px | Padding: 16px
+   -------------------------------------------------------------------------- */
 .card {
     display: flex;
     flex-direction: column;
@@ -34,11 +59,17 @@ body {
     flex-shrink: 0;
 }
 
+/* Card top — groups title, price, and feature list above the button */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+
+/* --------------------------------------------------------------------------
+   Typography — plan title
+   22px / 28px line-height | Weight 400 | Color #26251e
+   -------------------------------------------------------------------------- */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -47,6 +78,11 @@ body {
     margin-bottom: 8px;
 }
 
+
+/* --------------------------------------------------------------------------
+   Typography — price row (amount + billing period)
+   Base color: rgba(38, 37, 30, 0.5) — 50% opacity dark
+   -------------------------------------------------------------------------- */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -65,16 +101,26 @@ body {
     color: rgba(38, 37, 30, 0.5);
 }
 
+
+/* --------------------------------------------------------------------------
+   Card content — feature list block
+   Bottom margin creates space above the button
+   -------------------------------------------------------------------------- */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* "Includes:" / "Everything in…" subheading */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+
+/* --------------------------------------------------------------------------
+   Feature list — bullet points with checkmarks
+   -------------------------------------------------------------------------- */
 .features-list {
     list-style: none;
     padding: 0;
@@ -95,6 +141,12 @@ body {
     font-weight: 400;
 }
 
+
+/* --------------------------------------------------------------------------
+   Buttons — pill-shaped CTAs at the bottom of each card
+   Base: 999px radius (full pill) | Padding 14×24 | 16px medium weight
+   margin-top: auto pins button to card bottom
+   -------------------------------------------------------------------------- */
 .download-button {
     margin-top: auto;
     width: fit-content;
@@ -117,6 +169,7 @@ body {
     background-color: #D8D6CE;
 }
 
+/* Primary — dark fill (#111), white text. Used on Pro & Teams */
 .download-button.primary {
     background-color: #111;
     color: #fff;
@@ -130,6 +183,40 @@ body {
     background-color: #333;
 }
 
+/* Secondary — light fill (#e6e5e0). Used on Hobby */
+.download-button.secondary {
+    background-color: #e6e5e0;
+    color: #333;
+}
+
+.download-button.secondary:hover {
+    background-color: #D8D6CE;
+}
+
+.download-button.secondary:active {
+    background-color: #D8D6CE;
+}
+
+/* Tertiary — outline only. Available but not used in index.html */
+.download-button.tertiary {
+    background-color: transparent;
+    color: #111;
+    border: 1px solid #111;
+}
+
+.download-button.tertiary:hover {
+    background-color: #D8D6CE;
+}
+
+.download-button.tertiary:active {
+    background-color: #D8D6CE;
+}
+
+
+/* --------------------------------------------------------------------------
+   Page label — dev badge (see .page-label in index.html)
+   Fixed to top center; white chip with subtle shadow
+   -------------------------------------------------------------------------- */
 .page-label {
     position: fixed;
     top: 16px;
