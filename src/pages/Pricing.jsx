@@ -65,6 +65,38 @@ function Pricing() {
         buttonText: 'Contact Sales',
         buttonVariant: 'primary',
     };
+    const teamsPlan = {
+        title: 'Teams',
+        priceAmount: '$40',
+        pricePeriod: '/user/mo.',
+        includesText: 'Everything in Individual, plus:',
+        features: [
+            'Team marketplace for internal rules, skills, and plugins',
+            'Team marketplace for internal rules, skills, and plugins',
+            'Agentic code reviews with Bugbot',
+            'Cloud agents and automations with shared team context',
+        ],
+        buttonText: 'Get Teams',
+        buttonVariant: 'primary',
+    };
+    const enterprisePlan = {
+        title: 'Enterprise',
+        priceAmount: 'Custom',
+        pricePeriod: null,
+        includesText: 'Everything on Teams, Plus.',
+        features: [
+            'Pooled usage to maximize budget efficiency',
+            'Invoice/PO billing',
+            'SCIM seat management',
+            'Repository, model, and MCP access controls',
+            'Auto-run, browser, and network controls',
+            'Audit logs and service accounts',
+            'AI code tracking API',
+            'Priority support and account management',
+        ],
+        buttonText: 'Contact Sales',
+        buttonVariant: 'tertiary',
+    };
 
     return (
         // <> is a React Fragment — groups elements without adding extra HTML divs

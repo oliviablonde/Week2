@@ -146,6 +146,9 @@ body {
    Buttons — pill-shaped CTAs at the bottom of each card
    Base: 999px radius (full pill) | Padding 14×24 | 16px medium weight
    margin-top: auto pins button to card bottom
+
+   Variant usage (index.html & jsx-version.html):
+   Hobby — tertiary (Download) | Pro & Teams — secondary | Enterprise — primary (Contact Sales)
    -------------------------------------------------------------------------- */
 .download-button {
     margin-top: auto;
@@ -169,7 +172,7 @@ body {
     background-color: #D8D6CE;
 }
 
-/* Primary — dark fill (#111), white text. Used on Pro & Teams */
+/* Primary — dark fill (#111), white text. Enterprise (Contact Sales) */
 .download-button.primary {
     background-color: #111;
     color: #fff;
@@ -183,7 +186,7 @@ body {
     background-color: #333;
 }
 
-/* Secondary — light fill (#e6e5e0). Used on Hobby */
+/* Secondary — light fill (#e6e5e0). Pro (Get Pro) & Teams (Get Teams) */
 .download-button.secondary {
     background-color: #e6e5e0;
     color: #333;
@@ -197,7 +200,7 @@ body {
     background-color: #D8D6CE;
 }
 
-/* Tertiary — outline only. Available but not used in index.html */
+/* Tertiary — outline only (transparent fill, #111 border). Hobby (Start Free) */
 .download-button.tertiary {
     background-color: transparent;
     color: #111;
