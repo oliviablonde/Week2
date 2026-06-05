@@ -7,7 +7,7 @@
 //   - includesText: the label above the features list
 //   - features: an array of feature strings to display as a list
 //   - buttonText: the label for the button
-//   - buttonVariant: passed through to the Button component ("primary" or "secondary")
+//   - buttonVariant: passed through to the Button component ("primary", "secondary", or "tertiary")
 
 // "import" pulls in the Button component from its folder
 // This is how components connect to each other in a real project

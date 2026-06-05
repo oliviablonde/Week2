@@ -16,8 +16,8 @@ function Pricing() {
         pricePeriod: null,
         includesText: 'Includes:',
         features: ['No credit card required', 'Limited Agent requests', 'Limited Tab completions'],
-        buttonText: 'Download',
-        buttonVariant: 'secondary',
+        buttonText: 'Start for free',
+        buttonVariant: 'tertiary',
     };
     const proPlan = {
         title: 'Pro',
@@ -31,6 +31,38 @@ function Pricing() {
             'Maximum context windows',
         ],
         buttonText: 'Get Pro',
+        buttonVariant: 'secondary',
+    };
+    const teamsPlan = {
+        title: 'Teams',
+        priceAmount: '$40',
+        pricePeriod: '/user/mo.',
+        includesText: 'Everything in Individual, plus:',
+        features: [
+            'Team marketplace for internal rules, skills, and plugins',
+            'Team marketplace for internal rules, skills, and plugins',
+            'Agentic code reviews with Bugbot',
+            'Cloud agents and automations with shared team context',
+        ],
+        buttonText: 'Get Teams',
+        buttonVariant: 'secondary',
+    };
+    const enterprisePlan = {
+        title: 'Enterprise',
+        priceAmount: 'Custom',
+        pricePeriod: null,
+        includesText: 'Everything on Teams, Plus.',
+        features: [
+            'Pooled usage to maximize budget efficiency',
+            'Invoice/PO billing',
+            'SCIM seat management',
+            'Repository, model, and MCP access controls',
+            'Auto-run, browser, and network controls',
+            'Audit logs and service accounts',
+            'AI code tracking API',
+            'Priority support and account management',
+        ],
+        buttonText: 'Contact Sales',
         buttonVariant: 'primary',
     };
 
@@ -40,9 +72,11 @@ function Pricing() {
             <p className="page-label"><strong>React App</strong> — running with Vite</p>
             <div className="cards-container">
                 {/* The spread operator {...hobbyPlan} passes all object properties as individual props */}
-                {/* This is the same as: title="Hobby" price="Free" includesText="Includes:" etc. */}
+                {/* This is the same as: title="Hobby" priceAmount="Free" includesText="Includes:" etc. */}
                 <PricingCard {...hobbyPlan} />
                 <PricingCard {...proPlan} />
+                <PricingCard {...teamsPlan} />
+                <PricingCard {...enterprisePlan} />
             </div>
         </>
     );
